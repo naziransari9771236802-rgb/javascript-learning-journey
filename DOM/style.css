@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Rich Deep Dark Black-Brownish Vignette Gradient */
+    background: radial-gradient(circle at center, #2e1d17 0%, #170e0a 50%, #0d0806 100%);
+    overflow: hidden;
+}
+
+/* Main Container Card */
+.counter-card {
+    background: rgba(45, 30, 24, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(212, 163, 115, 0.2);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6),
+                0 0 30px rgba(184, 115, 51, 0.15);
+    padding: 40px 50px;
+    border-radius: 28px;
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7),
+                0 0 40px rgba(212, 163, 115, 0.25);
+}
+
+/* Heading */
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #e6ccb2;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Counter Display */
+#count {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #ede0d4;
+    margin-bottom: 30px;
+    display: inline-block;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease;
+    user-select: none;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Number pop animation */
+.bump {
+    transform: scale(1.22);
+}
+
+/* Button Group */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Common Button Styles */
+button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(230, 204, 178, 0.25);
+    color: #ede0d4;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+/* Circular + and - Buttons */
+#decrease, #increase {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+/* Reset Button */
+#reset {
+    padding: 12px 24px;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    background: rgba(184, 115, 51, 0.15);
+}
+
+/* Hover & Active States */
+button:hover {
+    background: #b08968;
+    color: #120b08;
+    border-color: #ddb892;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(176, 137, 104, 0.4);
+}
+
+button:active {
+    transform: translateY(1px) scale(0.96);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
