@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f2f2f2;
+
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    width: 400px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.instruction {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    margin-bottom: 12px;
+}
+
+button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background: #444;
+}
+
+#message {
+    min-height: 25px;
+
+    margin: 10px 0;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+#attempts {
+    font-weight: bold;
+}
+
+#resetBtn {
+    margin-top: 20px;
+
+    background: #777;
+}
+
+#resetBtn:hover {
+    background: #555;
+}
