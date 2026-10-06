@@ -1,0 +1,403 @@
+/* =========================================================
+   EVENTHUB - RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1050px) {
+
+    .main-nav {
+        gap: 18px;
+    }
+
+    .hero-grid {
+        gap: 40px;
+    }
+
+    .category-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .event-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ================= TABLET SMALL ================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-search {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .popular-searches {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-sidebar {
+        width: 100%;
+    }
+
+    .profile-nav {
+        flex-direction: row;
+
+        overflow-x: auto;
+    }
+
+    .profile-nav-btn {
+        white-space: nowrap;
+
+        width: auto;
+    }
+
+    .event-search-panel {
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: min(
+            100% - 28px,
+            1180px
+        );
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .hero-section {
+        padding: 60px 0 70px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+    .hero-search {
+        flex-direction: column;
+
+        padding: 8px;
+    }
+
+    .hero-search .search-field {
+        width: 100%;
+
+        min-height: 45px;
+    }
+
+    .hero-search .location-field {
+        border-left: none;
+
+        border-top: 1px solid var(--border);
+    }
+
+    .hero-search .btn {
+        width: 100%;
+    }
+
+    .hero-image-card,
+    .hero-image-card img {
+        min-height: 350px;
+    }
+
+    .floating-card-one {
+        left: 10px;
+        bottom: 20px;
+    }
+
+    .floating-card-two {
+        right: 10px;
+        top: 20px;
+    }
+
+
+    /* CATEGORY */
+
+    .category-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* EVENT */
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* SECTION HEADINGS */
+
+    .section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    /* STEPS */
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CTA */
+
+    .cta-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .cta-content h2 {
+        font-size: 30px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 45px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    /* FORMS */
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* SEARCH */
+
+    .event-search-panel {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* BOOKING */
+
+    .booking-form-card {
+        padding: 20px;
+    }
+
+    .booking-item {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-item-image {
+        height: 180px;
+    }
+
+
+    /* PROFILE */
+
+    .profile-content .card {
+        padding: 20px;
+    }
+
+
+    /* STATS */
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* DASHBOARD */
+
+    .dashboard-toolbar {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .organizer-event-item {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .organizer-actions {
+        width: 100%;
+    }
+
+    .organizer-actions button {
+        flex: 1;
+    }
+
+
+    /* CREATE EVENT */
+
+    .create-event-main {
+        padding: 20px;
+    }
+
+
+    /* EVENT DETAILS */
+
+    .event-detail-hero {
+        height: 350px;
+
+        border-radius: 16px;
+    }
+
+    .event-detail-hero-overlay {
+        padding: 22px;
+    }
+
+    .event-detail-title h1 {
+        font-size: 32px;
+    }
+
+    .event-meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* AUTH */
+
+    .auth-card {
+        padding: 28px 20px;
+
+        border-radius: 17px;
+    }
+
+}
+
+
+/* ================= EXTRA SMALL ================= */
+
+@media (max-width: 420px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .logo-icon {
+        width: 31px;
+        height: 31px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .category-grid {
+        gap: 10px;
+    }
+
+    .category-card {
+        padding: 18px 8px;
+    }
+
+    .category-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .page-hero {
+        padding: 50px 0;
+    }
+
+    .page-hero h1 {
+        font-size: 34px;
+    }
+
+    .event-card-content {
+        padding: 16px;
+    }
+
+    .floating-card {
+        padding: 10px 12px;
+    }
+
+}

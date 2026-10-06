@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FinanceFlow - Settings</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <span>💰</span>
+
+            <h2>FinanceFlow</h2>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="../index.html" class="nav-link">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="transactions.html" class="nav-link">
+                <span>💳</span>
+                Transactions
+            </a>
+
+            <a href="budgets.html" class="nav-link">
+                <span>🎯</span>
+                Budgets
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                <span>📈</span>
+                Reports
+            </a>
+
+            <a href="settings.html" class="nav-link active">
+                <span>⚙️</span>
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="welcome-text">
+                    Customize your experience
+                </p>
+
+                <h1>Settings</h1>
+
+            </div>
+
+        </header>
+
+
+        <!-- General Settings -->
+
+        <section class="card settings-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>General Settings</h2>
+
+                    <p>
+                        Manage your FinanceFlow preferences.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-list">
+
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <h3>Currency</h3>
+
+                        <p>
+                            Select your preferred currency.
+                        </p>
+
+                    </div>
+
+
+                    <select id="currencySetting">
+
+                        <option value="INR">
+                            ₹ Indian Rupee
+                        </option>
+
+                        <option value="USD">
+                            $ US Dollar
+                        </option>
+
+                        <option value="EUR">
+                            € Euro
+                        </option>
+
+                        <option value="GBP">
+                            £ British Pound
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <h3>Theme</h3>
+
+                        <p>
+                            Choose your preferred appearance.
+                        </p>
+
+                    </div>
+
+
+                    <select id="themeSetting">
+
+                        <option value="light">
+                            ☀️ Light
+                        </option>
+
+                        <option value="dark">
+                            🌙 Dark
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Data Management -->
+
+        <section class="card settings-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Data Management</h2>
+
+                    <p>
+                        Manage your saved financial data.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-list">
+
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <h3>Clear Transactions</h3>
+
+                        <p>
+                            Delete all saved transactions.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="danger-btn"
+                        id="clearTransactionsBtn"
+                    >
+                        Clear Transactions
+                    </button>
+
+                </div>
+
+
+                <div class="setting-item">
+
+                    <div>
+
+                        <h3>Reset Application</h3>
+
+                        <p>
+                            Remove all FinanceFlow data.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="danger-btn"
+                        id="resetAppBtn"
+                    >
+                        Reset App
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+
+        <section class="card settings-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>About FinanceFlow</h2>
+
+                    <p>
+                        Personal finance management application.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <div class="about-logo">
+                    💰
+                </div>
+
+                <div>
+
+                    <h2>FinanceFlow</h2>
+
+                    <p>
+                        Track your income, expenses, budgets
+                        and financial progress in one place.
+                    </p>
+
+                    <small>
+                        Version 1.0.0
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="../js/app.js"
+></script>
+
+</body>
+
+</html>

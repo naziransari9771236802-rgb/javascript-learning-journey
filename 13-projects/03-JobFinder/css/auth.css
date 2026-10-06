@@ -1,0 +1,411 @@
+/* =====================================================
+   JOBFINDER - AUTH PAGES
+   LOGIN / REGISTER
+   ===================================================== */
+
+
+/* ================= AUTH PAGE ================= */
+
+.auth-page {
+    min-height: 100vh;
+
+    background: var(--background);
+}
+
+
+/* ================= WRAPPER ================= */
+
+.auth-wrapper {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+}
+
+
+/* ================= LEFT VISUAL ================= */
+
+.auth-visual {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #e0e7ff
+        );
+}
+
+
+.auth-visual .logo {
+    align-self: flex-start;
+}
+
+
+.auth-visual-content {
+    max-width: 470px;
+
+    margin: auto;
+}
+
+
+.auth-icon {
+    width: 70px;
+    height: 70px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--white);
+
+    border-radius: 18px;
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.auth-visual-content h1 {
+    color: var(--text-dark);
+
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 18px;
+}
+
+
+.auth-visual-content p {
+    max-width: 420px;
+
+    color: var(--text-light);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* ================= RIGHT FORM ================= */
+
+.auth-form-section {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px 30px;
+
+    background: var(--white);
+}
+
+
+.auth-form-container {
+    width: 100%;
+
+    max-width: 450px;
+}
+
+
+/* Mobile logo */
+
+.mobile-auth-logo {
+    display: none;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================= HEADING ================= */
+
+.auth-heading {
+    margin-bottom: 30px;
+}
+
+
+.auth-heading h2 {
+    color: var(--text-dark);
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    margin-bottom: 9px;
+}
+
+
+.auth-heading p:not(.section-label) {
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+
+/* ================= FORM ================= */
+
+.auth-form-container form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group label {
+    color: var(--text-dark);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: var(--white);
+
+    color: var(--text-dark);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a1a1aa;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(79, 70, 229, 0.08);
+}
+
+
+/* ================= OPTIONS ================= */
+
+.auth-options {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    font-size: 12px;
+}
+
+
+.auth-options label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--text-light);
+
+    cursor: pointer;
+}
+
+
+.auth-options input {
+    accent-color: var(--primary);
+}
+
+
+.auth-options a {
+    color: var(--primary);
+
+    font-weight: 600;
+}
+
+
+/* ================= TERMS ================= */
+
+.terms-checkbox {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+
+.terms-checkbox input {
+    margin-top: 2px;
+
+    accent-color: var(--primary);
+}
+
+
+/* ================= SUBMIT ================= */
+
+.auth-submit {
+    width: 100%;
+
+    padding: 13px 16px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: var(--primary);
+
+    color: var(--white);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.auth-submit:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-1px);
+}
+
+
+/* ================= SWITCH ================= */
+
+.auth-switch {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+
+.auth-switch a {
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+
+.back-home {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+.back-home:hover {
+    color: var(--primary);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    .auth-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+
+    .auth-visual {
+        display: none;
+    }
+
+
+    .auth-form-section {
+        min-height: 100vh;
+
+        padding: 35px 20px;
+    }
+
+
+    .mobile-auth-logo {
+        display: inline-flex;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .auth-form-section {
+        padding: 30px 18px;
+    }
+
+
+    .auth-heading h2 {
+        font-size: 25px;
+    }
+
+
+    .auth-options {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}

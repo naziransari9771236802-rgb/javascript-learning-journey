@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ShopEase | Products</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            Shop<span>Ease</span>
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="products.html"
+                class="active"
+            >
+                Products
+            </a>
+
+            <a href="products.html?category=Fashion">
+                Categories
+            </a>
+
+            <a href="wishlist.html">
+                Wishlist
+                <span
+                    class="nav-count"
+                    id="wishlistCount"
+                >
+                    0
+                </span>
+            </a>
+
+            <a href="cart.html">
+                Cart
+                <span
+                    class="nav-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+            </a>
+
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- PRODUCTS -->
+
+    <main class="products-page">
+
+        <div class="page-title">
+
+            <p class="eyebrow">
+                OUR COLLECTION
+            </p>
+
+            <h1>
+                Explore Products
+            </h1>
+
+            <p>
+                Find something you'll love.
+            </p>
+
+        </div>
+
+
+        <!-- CONTROLS -->
+
+        <section class="filter-bar">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="productSearch"
+                    placeholder="Search products..."
+                >
+
+                <span>🔍</span>
+
+            </div>
+
+
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="Fashion">
+                    Fashion
+                </option>
+
+                <option value="Shoes">
+                    Shoes
+                </option>
+
+                <option value="Electronics">
+                    Electronics
+                </option>
+
+                <option value="Accessories">
+                    Accessories
+                </option>
+
+            </select>
+
+
+            <select id="sortFilter">
+
+                <option value="default">
+                    Sort By
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+                <option value="rating">
+                    Highest Rating
+                </option>
+
+                <option value="new">
+                    Newest First
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <p
+            class="result-count"
+            id="resultCount"
+        >
+        </p>
+
+
+        <section
+            class="product-grid"
+            id="allProducts"
+        >
+        </section>
+
+    </main>
+
+
+    <script src="./js/data.js"></script>
+    <script src="./js/app.js"></script>
+
+</body>
+
+</html>

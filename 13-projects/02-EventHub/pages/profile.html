@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile - EventHub</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+<header class="site-header">
+
+    <div class="container navbar">
+
+        <a href="../index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            <span>Event<span>Hub</span></span>
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="events.html">
+                Explore Events
+            </a>
+
+            <a href="my-bookings.html">
+                My Bookings
+            </a>
+
+            <a href="favorites.html">
+                Favorites
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="section">
+
+        <div class="container profile-layout">
+
+            <aside class="profile-sidebar card">
+
+                <div class="profile-avatar-large">
+                    👤
+                </div>
+
+                <h2 id="profileName">
+                    EventHub User
+                </h2>
+
+                <p id="profileEmail">
+                    user@example.com
+                </p>
+
+
+                <nav class="profile-nav">
+
+                    <button
+                        class="profile-nav-btn active"
+                        data-profile-tab="profile"
+                    >
+                        👤 Profile
+                    </button>
+
+                    <button
+                        class="profile-nav-btn"
+                        data-profile-tab="bookings"
+                    >
+                        🎟️ My Bookings
+                    </button>
+
+                    <button
+                        class="profile-nav-btn"
+                        data-profile-tab="favorites"
+                    >
+                        ❤️ Favorites
+                    </button>
+
+                    <button
+                        class="profile-nav-btn"
+                        id="logoutBtn"
+                    >
+                        🚪 Logout
+                    </button>
+
+                </nav>
+
+            </aside>
+
+
+            <section class="profile-content">
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                Account
+                            </span>
+
+                            <h2>
+                                Personal information
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="profileForm">
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="profileFirstName">
+                                    First Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="profileFirstName"
+                                    placeholder="First name"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="profileLastName">
+                                    Last Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="profileLastName"
+                                    placeholder="Last name"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="profileEmailInput">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="profileEmailInput"
+                                placeholder="you@example.com"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="profilePhone">
+                                Phone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="profilePhone"
+                                placeholder="+91 XXXXX XXXXX"
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Changes
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-bottom">
+
+        <p>
+            © 2026 EventHub.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script
+    type="module"
+    src="../js/app.js"
+></script>
+
+</body>
+
+</html>

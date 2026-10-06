@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Event - EventHub</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+<header class="site-header">
+
+    <div class="container navbar">
+
+        <a href="../index.html" class="logo">
+
+            <span class="logo-icon">✦</span>
+
+            <span>
+                Event<span>Hub</span>
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="events.html">
+                Explore
+            </a>
+
+            <a
+                href="organizer.html"
+                class="active"
+            >
+                Organizer
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="page-hero small">
+
+        <div class="container">
+
+            <span class="section-label">
+                Organizer
+            </span>
+
+            <h1>
+                Create a new event
+            </h1>
+
+            <p>
+                Share your event with the EventHub community.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="container">
+
+            <form
+                id="createEventForm"
+                class="create-event-layout"
+            >
+
+                <!-- ================= DETAILS ================= -->
+
+                <div class="card create-event-main">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Event Details
+                            </h2>
+
+                            <p>
+                                Tell people about your event.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="eventTitle">
+                            Event Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="eventTitle"
+                            placeholder="e.g. Future of Technology 2026"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="eventCategory">
+                                Category
+                            </label>
+
+                            <select
+                                id="eventCategory"
+                                required
+                            >
+
+                                <option value="">
+                                    Select category
+                                </option>
+
+                                <option value="Music">
+                                    Music
+                                </option>
+
+                                <option value="Technology">
+                                    Technology
+                                </option>
+
+                                <option value="Business">
+                                    Business
+                                </option>
+
+                                <option value="Sports">
+                                    Sports
+                                </option>
+
+                                <option value="Art">
+                                    Art
+                                </option>
+
+                                <option value="Education">
+                                    Education
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="eventPrice">
+                                Ticket Price
+                            </label>
+
+                            <input
+                                type="number"
+                                id="eventPrice"
+                                min="0"
+                                placeholder="₹0"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="eventDate">
+                                Event Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="eventDate"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="eventTime">
+                                Event Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="eventTime"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="eventLocation">
+                                Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="eventLocation"
+                                placeholder="City / Venue"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="eventVenue">
+                                Venue
+                            </label>
+
+                            <input
+                                type="text"
+                                id="eventVenue"
+                                placeholder="Venue name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="eventDescription">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="eventDescription"
+                            rows="6"
+                            placeholder="Describe your event..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="eventCapacity">
+                            Maximum Capacity
+                        </label>
+
+                        <input
+                            type="number"
+                            id="eventCapacity"
+                            min="1"
+                            placeholder="e.g. 500"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= SIDEBAR ================= -->
+
+                <aside>
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h2>
+                                    Event Image
+                                </h2>
+
+                                <p>
+                                    Add a visual for your event.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="image-upload"
+                            id="imageUploadArea"
+                        >
+
+                            <div class="upload-icon">
+                                🖼️
+                            </div>
+
+                            <strong>
+                                Upload Event Image
+                            </strong>
+
+                            <small>
+                                JPG, PNG up to 5MB
+                            </small>
+
+                            <input
+                                type="file"
+                                id="eventImage"
+                                accept="image/*"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card publish-card">
+
+                        <h3>
+                            Ready to publish?
+                        </h3>
+
+                        <p>
+                            Review your event details
+                            before publishing.
+                        </p>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-full"
+                        >
+                            Publish Event
+                        </button>
+
+
+                        <a
+                            href="organizer.html"
+                            class="btn btn-outline btn-full"
+                        >
+                            Cancel
+                        </a>
+
+                    </div>
+
+                </aside>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-bottom">
+
+        <p>
+            © 2026 EventHub.
+        </p>
+
+        <p>
+            Create. Share. Inspire.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script
+    type="module"
+    src="../js/app.js"
+></script>
+
+</body>
+
+</html>

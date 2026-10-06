@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EventHub - Discover Amazing Events</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✦</span>
+                <span>Event<span>Hub</span></span>
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html" class="active">Home</a>
+
+                <a href="pages/events.html">Explore Events</a>
+
+                <a href="pages/my-bookings.html">My Bookings</a>
+
+                <a href="pages/favorites.html">Favorites</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="pages/login.html" class="login-link">
+                    Login
+                </a>
+
+                <a href="pages/register.html" class="btn btn-primary">
+                    Get Started
+                </a>
+
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero-section">
+
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">
+                        ✨ Discover experiences
+                    </span>
+
+                    <h1>
+                        Find events that
+                        <span>inspire you.</span>
+                    </h1>
+
+                    <p>
+                        Discover concerts, workshops, conferences,
+                        sports and unforgettable experiences happening
+                        around you.
+                    </p>
+
+                    <div class="hero-search">
+
+                        <div class="search-field">
+                            <span>🔎</span>
+
+                            <input
+                                type="text"
+                                id="homeSearch"
+                                placeholder="Search events..."
+                            >
+                        </div>
+
+                        <div class="search-field location-field">
+                            <span>📍</span>
+
+                            <input
+                                type="text"
+                                id="homeLocation"
+                                placeholder="Location"
+                            >
+                        </div>
+
+                        <button
+                            class="btn btn-primary"
+                            id="homeSearchBtn"
+                        >
+                            Search
+                        </button>
+
+                    </div>
+
+                    <div class="popular-searches">
+
+                        <span>Popular:</span>
+
+                        <button data-search="Music">
+                            Music
+                        </button>
+
+                        <button data-search="Technology">
+                            Technology
+                        </button>
+
+                        <button data-search="Business">
+                            Business
+                        </button>
+
+                        <button data-search="Sports">
+                            Sports
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-image-card">
+
+                        <img
+                            src="assets/images/banners/hero-event.jpg"
+                            alt="Event"
+                            onerror="this.style.display='none'"
+                        >
+
+                        <div class="hero-image-placeholder">
+                            <span>🎉</span>
+                            <strong>Live Experiences</strong>
+                            <small>Discover something amazing</small>
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card floating-card-one">
+
+                        <span>🎟️</span>
+
+                        <div>
+                            <strong>10K+</strong>
+                            <small>Events</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card floating-card-two">
+
+                        <span>⭐</span>
+
+                        <div>
+                            <strong>4.9/5</strong>
+                            <small>User Rating</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">
+                            Explore
+                        </span>
+
+                        <h2>
+                            Browse by category
+                        </h2>
+                    </div>
+
+                    <a
+                        href="pages/events.html"
+                        class="text-link"
+                    >
+                        View all →
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="category-grid"
+                    id="categoryGrid"
+                >
+
+                    <button
+                        class="category-card"
+                        data-category="Music"
+                    >
+                        <span class="category-icon">🎵</span>
+                        <strong>Music</strong>
+                        <small>120+ Events</small>
+                    </button>
+
+                    <button
+                        class="category-card"
+                        data-category="Technology"
+                    >
+                        <span class="category-icon">💻</span>
+                        <strong>Technology</strong>
+                        <small>85+ Events</small>
+                    </button>
+
+                    <button
+                        class="category-card"
+                        data-category="Business"
+                    >
+                        <span class="category-icon">💼</span>
+                        <strong>Business</strong>
+                        <small>60+ Events</small>
+                    </button>
+
+                    <button
+                        class="category-card"
+                        data-category="Sports"
+                    >
+                        <span class="category-icon">⚽</span>
+                        <strong>Sports</strong>
+                        <small>75+ Events</small>
+                    </button>
+
+                    <button
+                        class="category-card"
+                        data-category="Art"
+                    >
+                        <span class="category-icon">🎨</span>
+                        <strong>Art</strong>
+                        <small>45+ Events</small>
+                    </button>
+
+                    <button
+                        class="category-card"
+                        data-category="Education"
+                    >
+                        <span class="category-icon">📚</span>
+                        <strong>Education</strong>
+                        <small>90+ Events</small>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURED EVENTS ================= -->
+
+        <section class="section section-muted">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            Don't miss out
+                        </span>
+
+                        <h2>
+                            Featured events
+                        </h2>
+
+                    </div>
+
+                    <a
+                        href="pages/events.html"
+                        class="text-link"
+                    >
+                        Explore all →
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="event-grid"
+                    id="featuredEvents"
+                >
+
+                    <!-- JS will populate events -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="center-heading">
+
+                    <span class="section-label">
+                        Simple & easy
+                    </span>
+
+                    <h2>
+                        How EventHub works
+                    </h2>
+
+                    <p>
+                        Find your next experience in just a few clicks.
+                    </p>
+
+                </div>
+
+
+                <div class="steps-grid">
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div class="step-icon">
+                            🔎
+                        </div>
+
+                        <h3>
+                            Discover
+                        </h3>
+
+                        <p>
+                            Search thousands of events
+                            based on your interests.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div class="step-icon">
+                            🎟️
+                        </div>
+
+                        <h3>
+                            Book
+                        </h3>
+
+                        <p>
+                            Choose your tickets and
+                            complete your booking.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div class="step-icon">
+                            🎉
+                        </div>
+
+                        <h3>
+                            Enjoy
+                        </h3>
+
+                        <p>
+                            Show your ticket and enjoy
+                            the experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="container cta-content">
+
+                <div>
+
+                    <span class="section-label">
+                        For organizers
+                    </span>
+
+                    <h2>
+                        Have an event to share?
+                    </h2>
+
+                    <p>
+                        Create your event and reach thousands
+                        of people looking for amazing experiences.
+                    </p>
+
+                </div>
+
+                <a
+                    href="pages/create-event.html"
+                    class="btn btn-light"
+                >
+                    Create an Event →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">✦</span>
+                    <span>Event<span>Hub</span></span>
+                </a>
+
+                <p>
+                    Discover experiences.
+                    Create memories.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="pages/events.html">
+                    All Events
+                </a>
+
+                <a href="pages/events.html">
+                    Categories
+                </a>
+
+                <a href="pages/favorites.html">
+                    Favorites
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Account</h4>
+
+                <a href="pages/login.html">
+                    Login
+                </a>
+
+                <a href="pages/register.html">
+                    Register
+                </a>
+
+                <a href="pages/profile.html">
+                    Profile
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Organizers</h4>
+
+                <a href="pages/organizer.html">
+                    Dashboard
+                </a>
+
+                <a href="pages/create-event.html">
+                    Create Event
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 EventHub. All rights reserved.
+            </p>
+
+            <p>
+                Built with HTML • CSS • JavaScript
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script
+        type="module"
+        src="js/app.js"
+    ></script>
+
+</body>
+
+</html>

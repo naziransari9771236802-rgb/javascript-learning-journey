@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Organizer Dashboard - EventHub</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+<header class="site-header">
+
+    <div class="container navbar">
+
+        <a href="../index.html" class="logo">
+
+            <span class="logo-icon">✦</span>
+
+            <span>
+                Event<span>Hub</span>
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="events.html">
+                Explore
+            </a>
+
+            <a
+                href="organizer.html"
+                class="active"
+            >
+                Organizer
+            </a>
+
+        </nav>
+
+
+        <a
+            href="profile.html"
+            class="profile-avatar"
+        >
+            👤
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="page-hero">
+
+        <div class="container">
+
+            <span class="section-label">
+                Organizer
+            </span>
+
+            <h1>
+                Event dashboard
+            </h1>
+
+            <p>
+                Manage your events and track performance.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="container">
+
+            <!-- ================= STATS ================= -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🎟️
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Bookings
+                        </span>
+
+                        <strong id="totalBookings">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📅
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Active Events
+                        </span>
+
+                        <strong id="activeEvents">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        💰
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Revenue
+                        </span>
+
+                        <strong id="totalRevenue">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ⭐
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Rating
+                        </span>
+
+                        <strong id="organizerRating">
+                            4.9
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ACTIONS ================= -->
+
+            <div class="dashboard-toolbar">
+
+                <div>
+
+                    <h2>
+                        My Events
+                    </h2>
+
+                    <p>
+                        Manage your published events.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="create-event.html"
+                    class="btn btn-primary"
+                >
+                    + Create Event
+                </a>
+
+            </div>
+
+
+            <!-- ================= EVENTS ================= -->
+
+            <div
+                class="organizer-event-list"
+                id="organizerEventList"
+            >
+
+                <!-- JavaScript generated -->
+
+            </div>
+
+
+            <!-- ================= CHART ================= -->
+
+            <div class="card chart-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Booking Overview
+                        </h2>
+
+                        <p>
+                            Track your event performance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="chart-container">
+
+                    <canvas
+                        id="organizerChart"
+                    ></canvas>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-bottom">
+
+        <p>
+            © 2026 EventHub.
+        </p>
+
+        <p>
+            Organizer Dashboard
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script
+    type="module"
+    src="../js/app.js"
+></script>
+
+</body>
+
+</html>

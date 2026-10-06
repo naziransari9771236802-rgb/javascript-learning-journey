@@ -1,0 +1,746 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FinanceFlow - Transactions</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <!-- Modal fallback CSS -->
+    <style>
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .modal-overlay.show {
+            display: flex !important;
+        }
+
+        .modal-overlay .modal {
+            width: 100%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 25px;
+            position: relative;
+        }
+
+        .dark-theme .modal-overlay .modal {
+            background: #1e293b;
+            color: #ffffff;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 30px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="app-container">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span>💰</span>
+                <h2>FinanceFlow</h2>
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a
+                    href="../index.html"
+                    class="nav-link"
+                >
+                    <span>📊</span>
+                    Dashboard
+                </a>
+
+
+                <a
+                    href="transactions.html"
+                    class="nav-link active"
+                >
+                    <span>💳</span>
+                    Transactions
+                </a>
+
+
+                <a
+                    href="budgets.html"
+                    class="nav-link"
+                >
+                    <span>🎯</span>
+                    Budgets
+                </a>
+
+
+                <a
+                    href="reports.html"
+                    class="nav-link"
+                >
+                    <span>📈</span>
+                    Reports
+                </a>
+
+
+                <a
+                    href="settings.html"
+                    class="nav-link"
+                >
+                    <span>⚙️</span>
+                    Settings
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main-content">
+
+            <!-- Topbar -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <p class="welcome-text">
+                        Manage your money
+                    </p>
+
+                    <h1>Transactions</h1>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="add-btn"
+                    id="openTransactionBtn"
+                >
+                    + Add Transaction
+                </button>
+
+            </header>
+
+
+            <!-- =========================
+                 FILTERS
+            ========================== -->
+
+            <section class="card filters-card">
+
+                <div class="filters">
+
+                    <div class="search-box">
+
+                        <span>🔍</span>
+
+                        <input
+                            type="search"
+                            id="transactionSearch"
+                            placeholder="Search transactions..."
+                        >
+
+                    </div>
+
+
+                    <select id="typeFilter">
+
+                        <option value="all">
+                            All Types
+                        </option>
+
+                        <option value="income">
+                            Income
+                        </option>
+
+                        <option value="expense">
+                            Expense
+                        </option>
+
+                    </select>
+
+
+                    <select id="categoryFilter">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="Food">
+                            Food
+                        </option>
+
+                        <option value="Shopping">
+                            Shopping
+                        </option>
+
+                        <option value="Transport">
+                            Transport
+                        </option>
+
+                        <option value="Bills">
+                            Bills
+                        </option>
+
+                        <option value="Entertainment">
+                            Entertainment
+                        </option>
+
+                        <option value="Health">
+                            Health
+                        </option>
+
+                        <option value="Education">
+                            Education
+                        </option>
+
+                        <option value="Salary">
+                            Salary
+                        </option>
+
+                        <option value="Freelance">
+                            Freelance
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+
+                    <select id="sortTransactions">
+
+                        <option value="newest">
+                            Newest First
+                        </option>
+
+                        <option value="oldest">
+                            Oldest First
+                        </option>
+
+                        <option value="high">
+                            Highest Amount
+                        </option>
+
+                        <option value="low">
+                            Lowest Amount
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 TRANSACTION TABLE
+            ========================== -->
+
+            <section class="card transactions-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            All Transactions
+                        </h2>
+
+                        <p id="transactionSummary">
+                            0 transactions
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Transaction
+                                </th>
+
+                                <th>
+                                    Category
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Type
+                                </th>
+
+                                <th>
+                                    Amount
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="transactionsTableBody"
+                        >
+
+                            <tr>
+
+                                <td
+                                    colspan="6"
+                                    class="empty-state"
+                                >
+                                    Loading transactions...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         ADD TRANSACTION MODAL
+    ========================== -->
+
+    <div
+        class="modal-overlay"
+        id="transactionModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="transactionModalTitle"
+        >
+
+            <div class="modal-header">
+
+                <div>
+
+                    <h2 id="transactionModalTitle">
+                        Add Transaction
+                    </h2>
+
+                    <p>
+                        Record your income or expense.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="close-modal"
+                    id="closeTransactionBtn"
+                    aria-label="Close modal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form
+                id="transactionForm"
+                autocomplete="off"
+            >
+
+                <!-- Transaction Name -->
+
+                <div class="form-group">
+
+                    <label for="transactionTitle">
+                        Transaction Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="transactionTitle"
+                        placeholder="e.g. Grocery Shopping"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Amount + Type -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="transactionAmount">
+                            Amount
+                        </label>
+
+                        <input
+                            type="number"
+                            id="transactionAmount"
+                            min="1"
+                            step="0.01"
+                            placeholder="Enter amount"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="transactionType">
+                            Type
+                        </label>
+
+                        <select
+                            id="transactionType"
+                            required
+                        >
+
+                            <option value="expense">
+                                Expense
+                            </option>
+
+                            <option value="income">
+                                Income
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Category + Date -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="transactionCategory">
+                            Category
+                        </label>
+
+                        <select
+                            id="transactionCategory"
+                            required
+                        >
+
+                            <option value="Food">
+                                Food
+                            </option>
+
+                            <option value="Shopping">
+                                Shopping
+                            </option>
+
+                            <option value="Transport">
+                                Transport
+                            </option>
+
+                            <option value="Bills">
+                                Bills
+                            </option>
+
+                            <option value="Entertainment">
+                                Entertainment
+                            </option>
+
+                            <option value="Health">
+                                Health
+                            </option>
+
+                            <option value="Education">
+                                Education
+                            </option>
+
+                            <option value="Salary">
+                                Salary
+                            </option>
+
+                            <option value="Freelance">
+                                Freelance
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="transactionDate">
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="transactionDate"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Note -->
+
+                <div class="form-group">
+
+                    <label for="transactionNote">
+                        Note
+                    </label>
+
+                    <textarea
+                        id="transactionNote"
+                        rows="3"
+                        placeholder="Optional note..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                    id="submitTransactionBtn"
+                >
+                    Add Transaction
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script
+        type="module"
+        src="../js/app.js"
+    ></script>
+
+
+    <!-- Modal fallback -->
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const openButton =
+                    document.getElementById(
+                        "openTransactionBtn"
+                    );
+
+                const closeButton =
+                    document.getElementById(
+                        "closeTransactionBtn"
+                    );
+
+                const modal =
+                    document.getElementById(
+                        "transactionModal"
+                    );
+
+
+                if (!openButton || !modal) {
+
+                    console.error(
+                        "FinanceFlow: Transaction modal elements not found."
+                    );
+
+                    return;
+
+                }
+
+
+                // Open modal
+
+                openButton.addEventListener(
+                    "click",
+                    function () {
+
+                        modal.classList.add("show");
+
+                        modal.setAttribute(
+                            "aria-hidden",
+                            "false"
+                        );
+
+                    }
+                );
+
+
+                // Close modal
+
+                closeButton?.addEventListener(
+                    "click",
+                    function () {
+
+                        modal.classList.remove("show");
+
+                        modal.setAttribute(
+                            "aria-hidden",
+                            "true"
+                        );
+
+                    }
+                );
+
+
+                // Close by clicking outside
+
+                modal.addEventListener(
+                    "click",
+                    function (event) {
+
+                        if (
+                            event.target === modal
+                        ) {
+
+                            modal.classList.remove(
+                                "show"
+                            );
+
+                            modal.setAttribute(
+                                "aria-hidden",
+                                "true"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+                // Close with Escape
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Escape"
+                            &&
+                            modal.classList.contains(
+                                "show"
+                            )
+                        ) {
+
+                            modal.classList.remove(
+                                "show"
+                            );
+
+                            modal.setAttribute(
+                                "aria-hidden",
+                                "true"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
+```

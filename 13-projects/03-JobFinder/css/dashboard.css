@@ -1,0 +1,320 @@
+/* =====================================================
+   JOBFINDER - DASHBOARD
+   ===================================================== */
+
+
+/* ================= PAGE ================= */
+
+.dashboard-page {
+    min-height: calc(100vh - 70px);
+
+    padding: 55px 0 80px;
+
+    background: var(--background);
+}
+
+
+/* ================= HEADING ================= */
+
+.dashboard-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+
+.dashboard-heading h1 {
+    color: var(--text-dark);
+
+    font-size: 30px;
+
+    margin-bottom: 6px;
+}
+
+
+.dashboard-heading p:not(.section-label) {
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+
+/* ================= STATS ================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+.stat-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 20px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+}
+
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    background: var(--primary-light);
+
+    border-radius: 11px;
+
+    font-size: 20px;
+}
+
+
+.stat-card p {
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    margin-bottom: 3px;
+}
+
+
+.stat-card strong {
+    color: var(--text-dark);
+
+    font-size: 23px;
+}
+
+
+/* ================= MAIN GRID ================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(270px, 0.7fr);
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* ================= CARD ================= */
+
+.dashboard-card {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 25px;
+}
+
+
+.dashboard-card h2 {
+    color: var(--text-dark);
+
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+
+.dashboard-card > p {
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    margin-bottom: 22px;
+}
+
+
+.dashboard-card-heading {
+    padding-bottom: 18px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* ================= EMPTY ================= */
+
+.empty-dashboard {
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+
+.empty-dashboard > div {
+    font-size: 40px;
+
+    margin-bottom: 12px;
+}
+
+
+.empty-dashboard h3 {
+    color: var(--text-dark);
+
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+
+.empty-dashboard p {
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= QUICK ACTIONS ================= */
+
+.quick-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+.quick-actions a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    background: #f8fafc;
+
+    border: 1px solid transparent;
+
+    border-radius: 9px;
+
+    color: var(--text-dark);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.quick-actions a:hover {
+    border-color: var(--border);
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+}
+
+
+.quick-actions span {
+    width: 30px;
+    height: 30px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--white);
+
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+
+/* ================= APPLICATION ================= */
+
+.applications-list {
+    min-height: 250px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 950px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-page {
+        padding: 40px 0 60px;
+    }
+
+
+    .dashboard-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .dashboard-heading h1 {
+        font-size: 26px;
+    }
+
+
+    .dashboard-heading .register-btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .dashboard-card {
+        padding: 20px;
+    }
+
+}

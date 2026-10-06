@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Account | ShopEase</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+    <div class="container nav-container">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            ShopEase
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+    <section class="auth-section">
+
+        <div class="auth-card">
+
+
+            <div class="auth-heading">
+
+                <p class="eyebrow">
+                    WELCOME TO SHOPEASE
+                </p>
+
+                <h1 id="authTitle">
+                    Login
+                </h1>
+
+                <p id="authSubtitle">
+                    Login to manage your account and orders.
+                </p>
+
+            </div>
+
+
+
+            <!-- LOGIN -->
+
+            <form id="loginForm">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter email"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter password"
+                        required
+                    >
+
+                </div>
+
+
+
+                <button
+                    class="btn btn-primary auth-submit"
+                    type="submit"
+                >
+                    Login
+                </button>
+
+
+            </form>
+
+
+
+            <!-- REGISTER -->
+
+            <form
+                id="registerForm"
+                class="hidden"
+            >
+
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter email"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create password"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+
+                <button
+                    class="btn btn-primary auth-submit"
+                    type="submit"
+                >
+                    Create Account
+                </button>
+
+
+            </form>
+
+
+
+            <div class="auth-switch">
+
+                <span id="switchText">
+                    Don't have an account?
+                </span>
+
+
+                <button
+                    type="button"
+                    id="switchAuth"
+                >
+                    Create Account
+                </button>
+
+            </div>
+
+
+
+            <div
+                id="userPanel"
+                class="hidden"
+            ></div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>
+            © 2026 ShopEase. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="./js/auth.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,327 @@
+/* =========================================================
+   EVENTHUB - PAGE SPECIFIC STYLES
+   ========================================================= */
+
+
+/* ================= EVENT DETAILS ================= */
+
+.event-detail {
+    padding-bottom: 90px;
+}
+
+.event-detail-hero {
+    position: relative;
+
+    height: 450px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c4cff,
+            #202020
+        );
+}
+
+.event-detail-hero img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.event-detail-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 40px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            transparent 25%,
+            rgba(0, 0, 0, 0.85)
+        );
+}
+
+.event-detail-title {
+    max-width: 750px;
+}
+
+.event-detail-title .event-badge {
+    position: static;
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+}
+
+.event-detail-title h1 {
+    margin-bottom: 10px;
+
+    font-size: clamp(30px, 5vw, 52px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.event-detail-title p {
+    opacity: 0.85;
+
+    font-size: 14px;
+}
+
+.event-detail-layout {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        330px;
+
+    gap: 30px;
+
+    margin-top: 30px;
+}
+
+.event-info-card {
+    padding: 30px;
+}
+
+.event-info-card h2 {
+    margin-bottom: 15px;
+
+    font-size: 25px;
+}
+
+.event-description {
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.event-meta-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin: 25px 0;
+}
+
+.event-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: #f7f7fb;
+}
+
+.event-meta-icon {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: #f0edff;
+
+    font-size: 17px;
+}
+
+.event-meta strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+.event-meta span {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+
+/* ================= EVENT BOOK CARD ================= */
+
+.event-book-card {
+    position: sticky;
+    top: 100px;
+
+    height: fit-content;
+
+    padding: 25px;
+}
+
+.event-book-card h2 {
+    margin-bottom: 5px;
+
+    font-size: 23px;
+}
+
+.event-book-card > p {
+    margin-bottom: 20px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+.book-price {
+    margin-bottom: 20px;
+
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.book-price small {
+    color: var(--text-light);
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.book-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+
+/* ================= BOOKING PAGE ================= */
+
+.booking-layout {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        360px;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+.booking-form-card {
+    padding: 30px;
+}
+
+
+/* ================= BOOKINGS ================= */
+
+.bookings-list {
+    min-height: 150px;
+}
+
+
+/* ================= PROFILE PAGE ================= */
+
+.profile-content .card {
+    padding: 30px;
+}
+
+
+/* ================= ORGANIZER ================= */
+
+.organizer-page {
+    min-height: 100vh;
+}
+
+
+/* ================= CREATE EVENT ================= */
+
+.create-event-page {
+    padding-bottom: 100px;
+}
+
+
+/* ================= AUTH ================= */
+
+.auth-card form {
+    margin-top: 5px;
+}
+
+
+/* ================= RESPONSIVE EVENT DETAIL ================= */
+
+@media (max-width: 900px) {
+
+    .event-detail-layout,
+    .booking-layout,
+    .create-event-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .event-book-card,
+    .booking-summary {
+        position: static;
+    }
+
+}
+
+
+/* ================= DARK PREVIEW BLOCK ================= */
+
+.event-detail-dark {
+    background: #171717;
+
+    color: white;
+}
+
+.event-detail-dark p {
+    color: #bbb;
+}
+
+
+/* ================= SUCCESS ================= */
+
+.success-message {
+    padding: 15px;
+
+    border: 1px solid #b9ead4;
+
+    border-radius: 10px;
+
+    background: #ecfbf4;
+
+    color: var(--success);
+
+    font-size: 13px;
+}
+
+
+/* ================= ERROR ================= */
+
+.error-message {
+    padding: 15px;
+
+    border: 1px solid #f0c0bb;
+
+    border-radius: 10px;
+
+    background: #fff4f3;
+
+    color: var(--danger);
+
+    font-size: 13px;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FinanceFlow - Reports</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <span>💰</span>
+
+            <h2>FinanceFlow</h2>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="../index.html" class="nav-link">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="transactions.html" class="nav-link">
+                <span>💳</span>
+                Transactions
+            </a>
+
+            <a href="budgets.html" class="nav-link">
+                <span>🎯</span>
+                Budgets
+            </a>
+
+            <a href="reports.html" class="nav-link active">
+                <span>📈</span>
+                Reports
+            </a>
+
+            <a href="settings.html" class="nav-link">
+                <span>⚙️</span>
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="welcome-text">
+                    Understand your finances
+                </p>
+
+                <h1>Reports</h1>
+
+            </div>
+
+        </header>
+
+
+        <!-- Report Summary -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card">
+
+                <div class="summary-icon income-icon">
+                    ↑
+                </div>
+
+                <div>
+
+                    <p>Total Income</p>
+
+                    <h3 id="reportIncome">
+                        ₹0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon expense-icon">
+                    ↓
+                </div>
+
+                <div>
+
+                    <p>Total Expense</p>
+
+                    <h3 id="reportExpense">
+                        ₹0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon saving-icon">
+                    💎
+                </div>
+
+                <div>
+
+                    <p>Net Savings</p>
+
+                    <h3 id="reportSavings">
+                        ₹0
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Monthly Chart -->
+
+        <section class="card chart-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Monthly Financial Report</h2>
+
+                    <p>
+                        Income and expenses over time
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="chart-container large-chart">
+
+                <canvas id="monthlyReportChart"></canvas>
+
+            </div>
+
+        </section>
+
+
+        <!-- Category Chart -->
+
+        <section class="card chart-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Spending by Category</h2>
+
+                    <p>
+                        Your expense distribution
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="chart-container large-chart">
+
+                <canvas id="reportCategoryChart"></canvas>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="../js/app.js"
+></script>
+
+</body>
+
+</html>

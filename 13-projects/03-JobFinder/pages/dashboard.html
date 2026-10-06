@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - JobFinder</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+                Job<span>Finder</span>
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="jobs.html">
+                    Jobs
+                </a>
+
+                <a href="saved-jobs.html">
+                    Saved Jobs
+                </a>
+
+                <a
+                    href="dashboard.html"
+                    class="active"
+                >
+                    Dashboard
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <a
+                    href="profile.html"
+                    class="register-btn"
+                >
+                    Profile
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main>
+
+        <section class="dashboard-page">
+
+            <div class="container">
+
+
+                <div class="dashboard-heading">
+
+                    <div>
+
+                        <p class="section-label">
+                            MY DASHBOARD
+                        </p>
+
+                        <h1>
+                            Welcome back 👋
+                        </h1>
+
+                        <p>
+                            Track your job search journey
+                            from one place.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="jobs.html"
+                        class="register-btn"
+                    >
+                        Find Jobs →
+                    </a>
+
+                </div>
+
+
+
+                <!-- ================= STATS ================= -->
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📄
+                        </div>
+
+                        <div>
+
+                            <p>
+                                Applications
+                            </p>
+
+                            <strong id="applicationsCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            ❤️
+                        </div>
+
+                        <div>
+
+                            <p>
+                                Saved Jobs
+                            </p>
+
+                            <strong id="savedCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <p>
+                                Interviews
+                            </p>
+
+                            <strong id="interviewCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            👤
+                        </div>
+
+                        <div>
+
+                            <p>
+                                Profile
+                            </p>
+
+                            <strong>
+                                80%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= DASHBOARD GRID ================= -->
+
+                <div class="dashboard-grid">
+
+
+                    <!-- APPLICATIONS -->
+
+                    <section class="dashboard-card">
+
+                        <div class="dashboard-card-heading">
+
+                            <div>
+
+                                <h2>
+                                    Recent Applications
+                                </h2>
+
+                                <p>
+                                    Track your latest applications.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="applicationsContainer"
+                            class="applications-list"
+                        >
+
+                            <div class="empty-dashboard">
+
+                                <div>
+                                    📄
+                                </div>
+
+                                <h3>
+                                    No applications yet
+                                </h3>
+
+                                <p>
+                                    Start applying for jobs
+                                    to see them here.
+                                </p>
+
+                                <a
+                                    href="jobs.html"
+                                    class="register-btn"
+                                >
+                                    Browse Jobs
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <aside class="dashboard-card">
+
+                        <h2>
+                            Quick Actions
+                        </h2>
+
+                        <p>
+                            Manage your job search.
+                        </p>
+
+
+                        <div class="quick-actions">
+
+                            <a href="jobs.html">
+                                <span>🔎</span>
+                                Search Jobs
+                            </a>
+
+                            <a href="saved-jobs.html">
+                                <span>❤️</span>
+                                Saved Jobs
+                            </a>
+
+                            <a href="profile.html">
+                                <span>👤</span>
+                                Edit Profile
+                            </a>
+
+                            <a href="jobs.html">
+                                <span>📄</span>
+                                Apply for Jobs
+                            </a>
+
+                        </div>
+
+                    </aside>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-about">
+
+                <a
+                    href="../index.html"
+                    class="logo"
+                >
+                    Job<span>Finder</span>
+                </a>
+
+                <p>
+                    Helping people discover opportunities
+                    and build better careers.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    For Job Seekers
+                </h3>
+
+                <a href="jobs.html">
+                    Browse Jobs
+                </a>
+
+                <a href="saved-jobs.html">
+                    Saved Jobs
+                </a>
+
+                <a href="profile.html">
+                    My Profile
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="#">
+                    About Us
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Follow Us
+                </h3>
+
+                <a href="#">
+                    LinkedIn
+                </a>
+
+                <a href="#">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 JobFinder. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

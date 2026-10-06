@@ -1,0 +1,1021 @@
+/* =========================================
+   FinanceFlow - Main Styles
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #111827;
+    --primary-light: #1f2937;
+    --accent: #16a34a;
+
+    --income: #16a34a;
+    --expense: #dc2626;
+    --warning: #f59e0b;
+
+    --bg: #f5f7fb;
+    --card: #ffffff;
+
+    --text: #111827;
+    --text-light: #6b7280;
+    --border: #e5e7eb;
+
+    --sidebar-width: 250px;
+
+    --radius: 16px;
+
+    --shadow:
+        0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   Links
+   ========================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   Buttons
+   ========================================= */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+
+/* =========================================
+   App Layout
+   ========================================= */
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   Sidebar
+   ========================================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: var(--sidebar-width);
+    height: 100vh;
+
+    background: var(--primary);
+    color: #ffffff;
+
+    padding: 28px 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0 10px;
+    margin-bottom: 45px;
+}
+
+.logo span {
+    font-size: 28px;
+}
+
+.logo h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* Sidebar Navigation */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px 14px;
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.nav-link span {
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.nav-link.active {
+    background: #ffffff;
+    color: var(--primary);
+}
+
+
+/* Sidebar Bottom */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding: 15px 10px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    color: #94a3b8;
+}
+
+.sidebar-bottom p {
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 5px;
+}
+
+.sidebar-bottom small {
+    font-size: 11px;
+}
+
+
+/* =========================================
+   Main Content
+   ========================================= */
+
+.main-content {
+    width: calc(100% - var(--sidebar-width));
+
+    margin-left: var(--sidebar-width);
+
+    padding: 32px;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   Topbar
+   ========================================= */
+
+.topbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 28px;
+}
+
+.welcome-text {
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.topbar h1 {
+    font-size: 28px;
+
+    font-weight: 750;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================
+   Add Button
+   ========================================= */
+
+.add-btn {
+    background: var(--primary);
+    color: #ffffff;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.add-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   Balance Card
+   ========================================= */
+
+.balance-card {
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border-radius: var(--radius);
+
+    padding: 28px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    box-shadow: var(--shadow);
+}
+
+.balance-card p {
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+.balance-card h2 {
+    font-size: 36px;
+
+    margin-bottom: 7px;
+}
+
+.balance-card span {
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+.balance-icon {
+    width: 62px;
+    height: 62px;
+
+    display: grid;
+    place-items: center;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border-radius: 16px;
+
+    font-size: 30px;
+}
+
+
+/* =========================================
+   Summary Grid
+   ========================================= */
+
+.summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+.summary-card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    box-shadow: var(--shadow);
+}
+
+.summary-card p {
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.summary-card h3 {
+    font-size: 20px;
+}
+
+.summary-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    display: grid;
+    place-items: center;
+
+    background: #f3f4f6;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+}
+
+.income-icon {
+    color: var(--income);
+    background: #dcfce7;
+}
+
+.expense-icon {
+    color: var(--expense);
+    background: #fee2e2;
+}
+
+.saving-icon {
+    color: #7c3aed;
+    background: #ede9fe;
+}
+
+.transaction-icon {
+    color: #2563eb;
+    background: #dbeafe;
+}
+
+
+/* =========================================
+   Dashboard Grid
+   ========================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.4fr 1fr;
+
+    gap: 22px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================
+   Cards
+   ========================================= */
+
+.card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.chart-card {
+    padding: 22px;
+}
+
+.card-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.card-header h2 {
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+.card-header p {
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   Select
+   ========================================= */
+
+select {
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 9px 11px;
+
+    color: var(--text);
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #9ca3af;
+}
+
+
+/* =========================================
+   Chart
+   ========================================= */
+
+.chart-container {
+    position: relative;
+
+    height: 280px;
+
+    width: 100%;
+}
+
+.large-chart {
+    height: 350px;
+}
+
+
+/* =========================================
+   Transactions Card
+   ========================================= */
+
+.transactions-card {
+    padding: 22px;
+
+    margin-bottom: 22px;
+}
+
+.view-all {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   Table
+   ========================================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 700px;
+}
+
+thead {
+    background: #f9fafb;
+}
+
+th {
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    padding: 13px 12px;
+
+    white-space: nowrap;
+}
+
+td {
+    padding: 15px 12px;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* =========================================
+   Empty State
+   ========================================= */
+
+.empty-state {
+    text-align: center;
+
+    color: var(--text-light);
+
+    padding: 35px !important;
+}
+
+.empty-state p {
+    margin-bottom: 5px;
+}
+
+.empty-state small {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   Modal
+   ========================================= */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 2000;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal {
+    background: #ffffff;
+
+    width: 100%;
+    max-width: 540px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.2);
+
+    animation: modalIn 0.2s ease;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 22px;
+}
+
+.modal-header h2 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.modal-header p {
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+.close-modal {
+    width: 34px;
+    height: 34px;
+
+    background: #f3f4f6;
+
+    border-radius: 9px;
+
+    font-size: 22px;
+
+    color: #4b5563;
+}
+
+.close-modal:hover {
+    background: #e5e7eb;
+}
+
+
+/* =========================================
+   Forms
+   ========================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    padding: 11px 12px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    background: #ffffff;
+
+    color: var(--text);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #6b7280;
+
+    box-shadow:
+        0 0 0 3px rgba(107, 114, 128, 0.08);
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.submit-btn {
+    width: 100%;
+
+    padding: 13px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border-radius: 9px;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    margin-top: 5px;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   Filters
+   ========================================= */
+
+.filters-card {
+    padding: 18px;
+
+    margin-bottom: 22px;
+}
+
+.filters {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 12px;
+}
+
+.search-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    padding: 0 12px;
+
+    background: #ffffff;
+}
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 11px 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   Budget
+   ========================================= */
+
+.budget-list {
+    padding: 0 22px 22px;
+}
+
+.budget-item {
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.budget-item:last-child {
+    border-bottom: none;
+}
+
+.budget-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.budget-name {
+    font-weight: 600;
+
+    font-size: 14px;
+}
+
+.budget-values {
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+.progress-bar {
+    width: 100%;
+
+    height: 8px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+
+    border-radius: 20px;
+
+    background: #111827;
+
+    transition: width 0.3s ease;
+}
+
+
+/* =========================================
+   Settings
+   ========================================= */
+
+.settings-card {
+    padding: 22px;
+
+    margin-bottom: 22px;
+}
+
+.settings-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.setting-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item h3 {
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.setting-item p {
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+.setting-item select {
+    min-width: 170px;
+}
+
+.danger-btn {
+    background: #fee2e2;
+
+    color: #b91c1c;
+
+    padding: 9px 13px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.danger-btn:hover {
+    background: #fecaca;
+}
+
+
+/* =========================================
+   About
+   ========================================= */
+
+.about-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding-top: 5px;
+}
+
+.about-logo {
+    width: 60px;
+    height: 60px;
+
+    display: grid;
+    place-items: center;
+
+    background: #f3f4f6;
+
+    border-radius: 15px;
+
+    font-size: 28px;
+
+    flex-shrink: 0;
+}
+
+.about-content h2 {
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.about-content p {
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-bottom: 5px;
+}
+
+.about-content small {
+    color: #9ca3af;
+
+    font-size: 11px;
+}
