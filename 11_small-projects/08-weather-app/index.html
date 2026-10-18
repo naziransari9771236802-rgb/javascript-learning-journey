@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App | Nazir Ansari</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="weather-app">
+
+        <header class="app-header">
+            <a href="#" class="logo">
+                <span class="logo-icon">☀</span>
+                <span>Weatherly</span>
+            </a>
+
+            <span class="live-badge">
+                <span class="live-dot"></span>
+                LIVE WEATHER
+            </span>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">WEATHER AT A GLANCE</p>
+
+            <h1>Discover the weather<br>around you.</h1>
+
+            <p class="hero-description">
+                Get accurate weather updates for any city around the world.
+            </p>
+
+            <form class="search-form" id="searchForm">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Search city, e.g. Lucknow"
+                    aria-label="Enter city name"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="searchButton">
+                    Search
+                </button>
+            </form>
+
+            <p class="message" id="message" role="status" aria-live="polite">
+                Enter a city to check its weather.
+            </p>
+        </section>
+
+        <section class="current-weather card">
+            <div class="weather-top">
+                <div>
+                    <p class="section-label">CURRENT WEATHER</p>
+
+                    <h2 id="cityName">Lucknow</h2>
+
+                    <p class="country-name" id="countryName">India</p>
+
+                    <p class="local-date" id="localDate">Loading date...</p>
+                </div>
+
+                <div class="weather-icon" id="weatherIcon" aria-hidden="true">
+                    ☀️
+                </div>
+            </div>
+
+            <div class="temperature-section">
+                <div class="temperature">
+                    <span id="temperature">--</span><span class="degree">°C</span>
+                </div>
+
+                <div class="temperature-info">
+                    <p id="weatherDescription">Loading weather...</p>
+
+                    <p class="feels-like">
+                        Feels like <strong id="feelsLike">--°C</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="weather-divider"></div>
+
+            <div class="weather-details">
+
+                <article class="detail-card">
+                    <span class="detail-icon">💧</span>
+
+                    <div>
+                        <p>Humidity</p>
+                        <h3 id="humidity">--%</h3>
+                    </div>
+                </article>
+
+                <article class="detail-card">
+                    <span class="detail-icon">💨</span>
+
+                    <div>
+                        <p>Wind Speed</p>
+                        <h3 id="windSpeed">-- km/h</h3>
+                    </div>
+                </article>
+
+                <article class="detail-card">
+                    <span class="detail-icon">☁️</span>
+
+                    <div>
+                        <p>Cloud Cover</p>
+                        <h3 id="cloudCover">--%</h3>
+                    </div>
+                </article>
+
+                <article class="detail-card">
+                    <span class="detail-icon">🔆</span>
+
+                    <div>
+                        <p>UV Index</p>
+                        <h3 id="uvIndex">--</h3>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="forecast-section card">
+
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">PLAN AHEAD</p>
+                    <h2>5-Day Forecast</h2>
+                </div>
+
+                <span class="forecast-badge">NEXT 5 DAYS</span>
+            </div>
+
+            <div class="forecast-list" id="forecastList">
+                <p class="forecast-placeholder">Loading forecast...</p>
+            </div>
+
+        </section>
+
+        <footer class="app-footer">
+            <p>
+                Designed &amp; Developed by
+                <strong>Nazir Ansari</strong>
+            </p>
+
+            <p>Powered by Open-Meteo API</p>
+        </footer>
+
+    </main>
+</body>
+</html>

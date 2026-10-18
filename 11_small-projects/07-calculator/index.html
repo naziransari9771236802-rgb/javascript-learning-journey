@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Calculator | Nazir Ansari</title>
+  <!-- Google Fonts for crisp typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="calculator-container">
+    <div class="calculator-card">
+      
+      <!-- Top Decorative Bar -->
+      <div class="card-header">
+        <span class="window-dot dot-red"></span>
+        <span class="window-dot dot-yellow"></span>
+        <span class="window-dot dot-green"></span>
+        <span class="brand-title">CALC PRO</span>
+      </div>
+
+      <!-- Display Section -->
+      <div class="display-screen">
+        <div class="previous-operand" id="previousOperand"></div>
+        <div class="current-operand" id="currentOperand">0</div>
+      </div>
+
+      <!-- Keypad Grid -->
+      <div class="keypad">
+        <!-- Row 1 -->
+        <button type="button" class="btn btn-action" data-action="clear">AC</button>
+        <button type="button" class="btn btn-action" data-action="delete">DEL</button>
+        <button type="button" class="btn btn-action" data-action="percent">%</button>
+        <button type="button" class="btn btn-operator" data-operator="÷">÷</button>
+
+        <!-- Row 2 -->
+        <button type="button" class="btn btn-number" data-number="7">7</button>
+        <button type="button" class="btn btn-number" data-number="8">8</button>
+        <button type="button" class="btn btn-number" data-number="9">9</button>
+        <button type="button" class="btn btn-operator" data-operator="×">×</button>
+
+        <!-- Row 3 -->
+        <button type="button" class="btn btn-number" data-number="4">4</button>
+        <button type="button" class="btn btn-number" data-number="5">5</button>
+        <button type="button" class="btn btn-number" data-number="6">6</button>
+        <button type="button" class="btn btn-operator" data-operator="-">−</button>
+
+        <!-- Row 4 -->
+        <button type="button" class="btn btn-number" data-number="1">1</button>
+        <button type="button" class="btn btn-number" data-number="2">2</button>
+        <button type="button" class="btn btn-number" data-number="3">3</button>
+        <button type="button" class="btn btn-operator" data-operator="+">+</button>
+
+        <!-- Row 5 -->
+        <button type="button" class="btn btn-action" data-action="toggle-sign">±</button>
+        <button type="button" class="btn btn-number" data-number="0">0</button>
+        <button type="button" class="btn btn-number" data-number=".">.</button>
+        <button type="button" class="btn btn-equals" data-action="calculate">=</button>
+      </div>
+
+    </div>
+
+    <!-- Elegant Footer -->
+    <footer class="portfolio-footer">
+      <p>Created by <span class="creator-name">Nazir Ansari</span></p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

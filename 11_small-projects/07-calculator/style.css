@@ -1,0 +1,283 @@
+/* ==========================================================================
+   CSS Variables & Design Tokens
+   ========================================================================== */
+:root {
+  --bg-main: #080B16;
+  --card-bg: #111827;
+  --display-bg: #090D18;
+  --btn-num-bg: #1B2436;
+  --btn-action-bg: #1E293B;
+  --btn-operator-bg: #243B70;
+  
+  --text-main: #F8FAFC;
+  --text-secondary: #94A3B8;
+  
+  --gradient-equals: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+  --border-gradient: linear-gradient(135deg, rgba(37, 99, 235, 0.4), rgba(124, 58, 237, 0.4));
+  
+  --glow-equals: rgba(124, 58, 237, 0.45);
+  --glow-operator: rgba(37, 99, 235, 0.35);
+  --glow-number: rgba(148, 163, 184, 0.15);
+  
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --border-radius-card: 28px;
+  --border-radius-btn: 16px;
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-main);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  padding: 20px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Ambient Background Glow */
+body::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.18) 0%, rgba(37, 99, 235, 0.08) 50%, transparent 75%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Calculator Layout & Card
+   ========================================================================== */
+.calculator-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.calculator-card {
+  width: 100%;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-card);
+  padding: 24px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 0 25px rgba(37, 99, 235, 0.15);
+}
+
+/* Elegant border illumination */
+.calculator-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: calc(var(--border-radius-card) + 1px);
+  background: var(--border-gradient);
+  z-index: -1;
+}
+
+/* Window Chrome / Status Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 0 4px;
+}
+
+.window-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red { background: #EF4444; opacity: 0.8; }
+.dot-yellow { background: #F59E0B; opacity: 0.8; }
+.dot-green { background: #10B981; opacity: 0.8; }
+
+.brand-title {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   Display Screen
+   ========================================================================== */
+.display-screen {
+  background-color: var(--display-bg);
+  border-radius: 18px;
+  padding: 20px 22px;
+  min-height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 24px;
+  word-break: break-all;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.previous-operand {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  min-height: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.current-operand {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  transition: font-size var(--transition-fast);
+}
+
+/* ==========================================================================
+   Keypad & Buttons
+   ========================================================================== */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  height: 64px;
+  border-radius: var(--border-radius-btn);
+  font-family: inherit;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 
+    transform var(--transition-fast), 
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+/* Button Variants */
+.btn-number {
+  background-color: var(--btn-num-bg);
+  color: var(--text-main);
+}
+
+.btn-action {
+  background-color: var(--btn-action-bg);
+  color: #38BDF8;
+  font-size: 1.2rem;
+}
+
+.btn-operator {
+  background-color: var(--btn-operator-bg);
+  color: #60A5FA;
+  font-size: 1.5rem;
+}
+
+.btn-equals {
+  background: var(--gradient-equals);
+  color: #FFFFFF;
+  font-size: 1.6rem;
+}
+
+/* Hover States */
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.18);
+}
+
+.btn-number:hover,
+.btn-action:hover {
+  box-shadow: 0 6px 14px var(--glow-number);
+}
+
+.btn-operator:hover {
+  box-shadow: 0 6px 16px var(--glow-operator);
+}
+
+.btn-equals:hover {
+  box-shadow: 0 8px 24px var(--glow-equals);
+  filter: brightness(1.15);
+}
+
+/* Active / Press States */
+.btn:active {
+  transform: translateY(1px) scale(0.97);
+  filter: brightness(0.95);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.portfolio-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.creator-name {
+  color: #60A5FA;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ==========================================================================
+   Responsive Adaptability
+   ========================================================================== */
+@media (max-width: 400px) {
+  .calculator-card {
+    padding: 18px;
+    border-radius: 22px;
+  }
+  
+  .btn {
+    height: 56px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+  }
+  
+  .current-operand {
+    font-size: 2.1rem;
+  }
+  
+  .keypad {
+    gap: 9px;
+  }
+}
